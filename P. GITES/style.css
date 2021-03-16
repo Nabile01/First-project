@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*Montagne parallax*/
+.zoom{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+    background: url(media/bg\ \(1\).jpg) ;
+    background-size: cover;
+    padding-bottom: 0;
+}
+.zoom:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+    background: linear-gradient(transparent,#fff);
+}
+.zoom #layer1{
+    position: absolute;
+    left: 40%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.zoom #layer2{
+    position: absolute;  
+    right: 0;
+    width: 100%;
+    
+    z-index: 9;
+}
+.zoom #text{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    transform: translateY(50%);
+    
+}
+.content{
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content h2{
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+    
+}
+.content p{
+    font-size: 1.2em;
+
+}
+@media screen and (max-width:700px){
+   .formReach{
+      display:flex;
+      flex-direction: column;
+      padding: 7px 0 7px;
+      margin:0px 0 50px 0px;
+      align-items: center;
+      /*background: linear-gradient(to bottom right,white,rgb(54, 54, 54));  */
+      background: rgb(37, 37, 37); 
+      border: 2px solid rgb(47, 47, 47);   
+      box-shadow: 0 0 4px 0 rgb(68, 68, 68) ;   
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      /*border-radius:10px;*/
+      font-size: 20px;  
+      color: cornsilk;
+   }
+   .desti{
+      margin: 0 auto;
+   }
+   .zoom{
+      display: none;
+   }
+}
+/* Section photo de la page d'accueil */
+.gallery {
+   width: 1250px;
+   height: auto;
+   margin: 50px auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+   box-sizing: border-box;
+   padding: 5px 5px; 
+   
+ } 
+ 
+ .gallery__item--1 {  
+    grid-area:1 /1 /3 /3 ; 
+   
+   width: 100%;
+   height: 410px;
+ } 
+ 
+ .gallery__item--2 {  
+    grid-area: 3/ 1/ 4/ 2; 
+   margin-top: 5px;
+   width: 100%;
+   height: auto;
+ }
+ 
+ .gallery__item--3 { 
+    grid-area: 3/ 2/ 4/ 3 ;  
+   margin-top: 5px;
+   width: 100%;
+   height: auto;
+ }
+ 
+ .gallery__item--4 {
+    grid-area: 1/ 3/ 2/ 4 ;   
+   padding-bottom: 5px;
+   width: 100%;
+   height: auto;
+ }
+ 
+ .gallery__item--5 {  
+    grid-area: 1/ 4/ 2/ 5 ;
+   padding-bottom: 5px;
+   width: 100%;
+   height: auto;
+ }
+ 
+ .gallery__item--6 {  
+    grid-area: 2/ 3/ 4/ 5 ;
+   
+   width: 100%;
+   height: auto;
+   margin-top: 5px;
+   padding: 0;
+ }
+ 
+ 
+ @media screen and (max-width:1200px ){
+   .formReach{
+      display:flexbox;
+   }
+   .gallery {
+       width: 935px;
+       height: auto;
+       margin: 10px auto;
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(300px,1fr));   
+   }
+   .gallery__item--1 {
+       grid-area: 1/ 1/ 3/ 3;
+       
+       width: 600px;
+       height: 405px;
+     }     
+     .gallery__item--2 {   
+        grid-area: 3/ 1/ 4/ 2;    
+       
+       width: 300px;       
+     }
+     .gallery__item--3 { 
+        grid-area: 4/ 1/ 5/ 2;      
+       
+       width: 300px;       
+     }
+     .gallery__item--4 {  
+        grid-area: 1/ 3/ 2/ 4;     
+       
+       width: 300px;
+       height: auto;
+     }
+     .gallery__item--5 {   
+        grid-area: 2/ 3/ 3/ 4;   
+       
+       width: 300px;
+       height: auto;
+     }
+     .gallery__item--6 {    
+        grid-area: 3/ 2/ 5/ 4;  
+       
+       width: 605px;
+       height: auto;
+     }
+ }
+ @media screen and (max-width:900px ){
+   .gallery {
+       width: 600px;
+       height: auto;
+       margin: 5px auto;
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+       gap: 5px;   
+   }
+   .gallery__item--1 {
+      grid-area: 1/ 1/ 3/ 3;
+       
+       width: 600px;
+       height: 400px;
+     }    
+     .gallery__item--2 {
+       margin-top: 10px;  
+       grid-area: 3/ 1/ 4/ 2;
+       
+       width: 300px;      
+     }
+     .gallery__item--3 {
+        grid-area: 3/ 2/ 4/ 3;
+       margin-top: 10px;
+       margin-left: 5px; 
+       
+       width: 300px;     
+     }
+     .gallery__item--4 {  
+        grid-area: 5/ 1/ 6/ 2;    
+       
+       width: 300px;
+       height: auto;
+     }
+     .gallery__item--5 {      
+       margin-left: 5px;
+       grid-area: 5/ 2/ 6/ 3;
+       
+       width: 300px;
+       height: auto;
+     }
+     .gallery__item--6 { 
+        grid-area: 6/ 1/ 8/ 3;     
+       
+       width: 600px;
+       height: auto;
+     }
+ }
+/* PRESENTATION */
+/* BARRE DE RECHERCHE */
+
+.formReach {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 15px;
+   box-shadow: 8px 8px 8px rgba(151, 151, 151, 0.404);
+   font-family: "Raleway";
+   background-color: rgba(19, 19, 19, 0.808);
+   color: white;
+}
+
+.formReach > input {
+   padding: 5px;
+   width: 150px;
+   border-radius: 4px;
+}
+
+.formReach > label {
+   padding: 5px;
+}
+
+#buttonResearch {
+   padding: 7px;
+   margin-left: 10px;
+   border-radius: 4px;
+   background-color:  rgba(255, 255, 255, 0.973);
+   border: ridge 1.4mm rgba(34, 34, 34, 0.719);
+   border-radius: 7px;
+   text-transform: uppercase;
+   box-shadow: inset 0 0 0 0 rgba(17, 163, 221, 0.966);
+   transition: ease-out 0.2s;
+   outline: none;
+   font-family: "Raleway";
+   cursor: pointer;
+}
+
+#buttonResearch:hover {
+   box-shadow: inset 114px 0 0 0 rgba(17, 163, 221, 0.966);
+}
+/*Barre recherche accueil-présentation*/
+/*main{
+   padding-top: 10px;
+ }
+ .formReach{
+    display:inline-flex;
+    padding: 7px 0 7px;
+    margin:0px 0 50px 0px;
+    align-items: center;
+    
+    background: rgb(37, 37, 37); 
+    border: 2px solid rgb(47, 47, 47);   
+    box-shadow: 0 0 4px 0 rgb(68, 68, 68) ;   
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    
+    font-size: 20px;
+    
+    color: cornsilk;
+ }
+ .desti{
+    margin: 5px auto;
+    margin-left: 5px;
+   
+    width: 30%;
+    
+    
+ }
+ .arriv{
+    
+    margin: 5px auto;
+    
+    width: 25%;
+ }
+ 
+ .depart{
+    margin: 5px auto;
+    
+    width: 25%;
+ }
+ .button{
+    margin: 5px auto;
+    
+    width: 20%;
+    
+  }
+ 
+  .formReach>span>input{
+    
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid rgb(90, 90, 90);
+ }
+  .formReach span label{
+   font-size: 20px;
+   font-weight:80px ;
+   text-decoration: up;
+  
+    color: rgb(251, 250, 250);
+    /*text-shadow:  5px 5px 5px rgb(246, 246, 246);  
+ }*/
+ #place{
+   
+   font-size: 15px;
+   font-style: italic;
+ }
+ .formReach >span>button{
+    border-radius:5px ;
+    background-color: rgb(89, 89, 90);
+    width: 120px;
+    height: 40px;
+      
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration:none ;
+    font-size: 10px;   
+    color: rgb(251, 249, 251);
+ }
+ 
+ button:hover{
+    color: #070707;
+    background-color: #fafbfb;
+    box-shadow: 0 0 10px #aaaaaa,0 0 40px #a8a8a8,0 0 80px #aeaeaf ;
+    
+ }
+ .cheat{
+   text-align: center;
+   margin-top: 10px;
+   text-shadow:  0 0 4px rgb(83, 83, 83);
+ }*/
+/* FIN BARRE RECHRCE */
+
+/*SECTION PRESENTATION */
+section.produit > h3 {
+   text-align: center;
+   margin: 0px;
+   padding: 10px;
+   font-family: 'Libre Baskerville', serif;
+   color: rgb(0, 0, 0);
+   text-transform: uppercase;
+   background-color: rgba(255, 255, 255, 0.596);
+}
+
+section.produit {
+   background-image: url(media/bg-descri1.jpeg);
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 600px;
+}
+
+/* 
+section.produit > div.affiche {
+   background-color: red;
+} */
+
+/* SLIDER */
+div.central {
+   display: flex;
+   justify-content: center;
+   height: 80vh;
+   padding: 15px;
+}
+
+div.w3-center {
+   display: flex;
+   justify-content: center;
+   /* margin-left: 200px; */
+}
+
+div.w3-section > div > a {
+   cursor: pointer;
+   padding: 6px;
+}
+
+div.w3-section {
+   position: relative;
+   top: 10px;
+}
+
+div.w3-section > div {
+   display: inline-block;
+   background-color: rgba(14, 13, 13, 0.856);
+   margin: 5px;
+   border: 1px white solid;
+   border-radius: 50%;
+   height: 12px;
+   width: 12px;
+   box-sizing: border-box;
+}
+
+div.w3-section > div:hover {
+   background-color: white;
+}
+
+img.mySlides{
+   box-shadow: 2px 2px 12px rgb(44, 44, 44);
+   margin-top: 20px;
+}
+
+
+/* FIN SLIDER */
+
+
+
+/* BLOC RESERVATION */
+div.reservationBox {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   right: 40px;
+   height: 400px;
+   padding: 10px;
+   top: 80px;
+   z-index: 1;
+   background-color: rgb(255, 255, 255);
+   box-shadow: 2px 2px 12px rgb(99, 98, 98);
+   font-family: "Raleway";
+   text-align: center;
+}
+
+p.priceWeek {
+   background-color: rgba(17, 163, 221, 0.966);
+   padding: 8px;
+}
+
+div.form-reservation > form > div.button > button {
+   padding: 6px;
+   width: 200px;
+   background-color: white;
+   border: #11a3ddf6 2px solid;
+   /* background-color: rgba(17, 163, 221, 0.966); */
+   font-family: 'Libre Baskerville', serif;
+   cursor: pointer;
+}
+
+div.form-reservation > form > div.button > button:hover {
+   background-color: #11a3ddf6;
+   border: #11a3ddf6 2px solid;
+   color: white;
+}
+
+div.form-reservation > form > div > input{
+   display: block;
+   margin-bottom: 5px;
+   padding: 3px;
+   width: 190px;
+   
+}
+
+/* DESCRIPTION */
+section.description > div.listDescri > h2 {
+   font-family: 'Libre Baskerville', serif;
+   color: rgba(17, 163, 221, 0.966);
+   margin: 0px;
+}
+
+div.listDescri {
+   position: absolute;
+   top: 39%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 900px;
+   height: auto;
+   padding: 10px;
+   font-family: "Raleway";
+   background-color: #fffffff5;
+   border-radius: 5px;
+}
+
+div.listDescri > div.Speci1 {
+   display: flex;
+   font-size: 1.1rem;
+   padding: 6px;
+}
+
+div.listDescri > div.Speci1 > p {
+   padding: 10px;
+   margin-right: 10px;
+}
+
+p.lodgeDescription {
+   font-size: 1.1rem;
+   padding: 10px;
+}
+
+section.description {
+   position: relative;
+   background-color: rgba(3, 3, 3, 0.808);
+   height: 70vh;
+}
+/* FIN DESCRIPTION */
+
+footer {
+   display: flex;
+   justify-content: space-around;
+   background-color: black;
+   border-top: 1px rgba(255, 255, 255, 0.801) solid;
+   color: white;
+}
+
+
